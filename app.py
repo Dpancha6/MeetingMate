@@ -2,7 +2,7 @@ from flask import Flask, redirect, url_for, session, request, render_template
 import flask
 import google.oauth2.credentials
 import google_auth_oauthlib.flow
-import googleapiclient.discovery # type: ignore
+import googleapiclient.discovery
 import datetime
 import os
 import base64
@@ -56,10 +56,10 @@ def events():
 
     service = googleapiclient.discovery.build('calendar', 'v3', credentials=credentials)
     now = datetime.datetime.utcnow().isoformat() + 'Z'
-    three_days_later = (datetime.datetime.utcnow() + datetime.timedelta(days=3)).isoformat() + 'Z'
+    next_week = (datetime.datetime.utcnow() + datetime.timedelta(days=7)).isoformat() + 'Z'
 
     events_result = service.events().list(calendarId='primary', timeMin=now, 
-                                          timeMax=three_days_later, 
+                                          timeMax=next_week, 
                                           maxResults=10, singleEvents=True,
                                           orderBy='startTime').execute()
     events = events_result.get('items', [])
@@ -86,10 +86,10 @@ def send_reminders():
     gmail_service = googleapiclient.discovery.build('gmail', 'v1', credentials=credentials)
 
     now = datetime.datetime.utcnow().isoformat() + 'Z'
-    three_days_later = (datetime.datetime.utcnow() + datetime.timedelta(days=3)).isoformat() + 'Z'
+    next_week = (datetime.datetime.utcnow() + datetime.timedelta(days=7)).isoformat() + 'Z'
 
     events_result = calender_service.events().list(calendarId='primary', timeMin=now,
-                                        timeMax=three_days_later, 
+                                        timeMax=next_week, 
                                         maxResults=10, singleEvents=True,
                                         orderBy='startTime').execute()
     events = events_result.get('items', [])

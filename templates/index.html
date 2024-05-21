@@ -2,11 +2,47 @@
 <html>
   <head>
     <title>MeetingMate</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        background-color: #f4f4f9;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+      }
+      .container {
+        text-align: center;
+        background: #fff;
+        padding: 30px;
+        border-radius: 8px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      }
+      h1 {
+        color: #333;
+      }
+      a {
+        display: inline-block;
+        margin: 10px 0;
+        padding: 10px 20px;
+        text-decoration: none;
+        color: #fff;
+        background-color: #007bff;
+        border-radius: 5px;
+      }
+      a:hover {
+        background-color: #0056b3;
+      }
+    </style>
   </head>
   <body>
-    <h1>Welcome to MeetingMate</h1>
-    <p><a href="/authorize">Authorize Google Account</a></p>
-    <p><a href="/events">Show Upcoming Events</a></p>
-    <p><a href="/send_reminders">Send Reminder Emails</a></p>
+    <div class="container">
+      <h1>Welcome to MeetingMate</h1>
+      <a href="/authorize">Authorize Google Account</a>
+      <a href="/events">Show Upcoming Events</a>
+      <a href="/send_reminders">Send Reminder Emails</a>
+    </div>
   </body>
 </html>
