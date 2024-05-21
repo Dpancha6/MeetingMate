@@ -1,0 +1,16 @@
+<!-- templates/events.html -->
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Upcoming Events</title>
+  </head>
+  <body>
+    <h1>Upcoming Events</h1>
+    <ul>
+      {% for event in events %}
+      <li>{{ event.start }} - {{ event.summary }}</li>
+      {% endfor %}
+    </ul>
+    <p><a href="/">Back to Home</a></p>
+  </body>
+</html>
