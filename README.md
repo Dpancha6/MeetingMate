@@ -28,7 +28,7 @@ MeetingMate is a Google Calendar Automation Tool that seamlessly integrates with
 2. **Create and activate a virtual environment**:
    python -m venv venv
    source venv/bin/activate
-   # On Windows use `venv\Scripts\activate`
+   On Windows use `venv\Scripts\activate`
 
 4. **Install the required packages**:
    pip install -r requirements.txt
