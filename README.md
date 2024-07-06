@@ -27,15 +27,16 @@ MeetingMate is a Google Calendar Automation Tool that seamlessly integrates with
 
 2. **Create and activate a virtual environment**:
    python -m venv venv
-   source venv/bin/activate # On Windows use `venv\Scripts\activate`
+   source venv/bin/activate
+   # On Windows use `venv\Scripts\activate`
 
-3. **Install the required packages**:
+4. **Install the required packages**:
    pip install -r requirements.txt
 
-4. **Run the Flask application**:
+5. **Run the Flask application**:
    python app.py
 
-5. **Open your browser and navigate to `http://localhost:8000`**:
+6. **Open your browser and navigate to `http://localhost:8000`**:
    - Click on "Authorize Google Account" and complete the OAuth 2.0 flow.
    - Visit `http://localhost:8000/events` to see the upcoming events.
    - Visit `http://localhost:8000/send_reminders` to send reminder emails to attendees.
