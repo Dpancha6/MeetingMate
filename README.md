@@ -2,7 +2,7 @@
 
 MeetingMate is a Google Calendar Automation Tool that seamlessly integrates with the Google Calendar API and Gmail API. The primary objective is to send timely reminders to all attendees of upcoming events scheduled on the user's Google Calendar.
 
-<img width="500" alt="MeetingMate" src="https://github.com/Dpancha6/MeetingMate/assets/89943583/4664588b-4bba-47a2-b601-3c042b019d1c">
+<img width="500" alt="Login" src="https://github.com/Dpancha6/MeetingMate/assets/89943583/014bc2cd-ac45-428a-bf15-b2b600942c25">
 
 <img width="500" alt="homepage" src="https://github.com/Dpancha6/MeetingMate/assets/89943583/0bf1befd-6e81-49b5-abcf-ff6827dc40d0">
 
